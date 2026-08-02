@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Premium Black & Gold Theme */
+  .bg-app-purple-mesh {
+    background: 
+      radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(217, 119, 6, 0.10) 0%, transparent 45%),
+      #000000;
+    background-attachment: fixed;
+  }
+
+  .glass-gold-card {
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+  }
+
+  .text-gold-glow {
+    color: #fbbf24;
+    text-shadow: 0 0 12px rgba(251, 191, 36, 0.4);
+  }
+
+  .border-gold-gradient {
+    border-image: linear-gradient(to right, #f59e0b, #fbbf24, #d97706) 1;
+  }
+}
+
+body {
+  background-color: #000000;
+  color: #fef3c7;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ZEZOX MEDICAL",
+  "description": "ZEZOX MEDICAL - AI Medical Assistant with Camera Scan for Medical Reports, Clinical Consultations, and OCR Interpretation.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
