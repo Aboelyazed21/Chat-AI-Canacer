@@ -11,9 +11,6 @@ import { SavedAnswersModal } from './components/SavedAnswersModal';
 import { CameraScannerModal } from './components/CameraScannerModal';
 import { ChatMessage, Language, UserProfile } from './types';
 
-// رابط السيرفر الأساسي على Railway
-const API_BASE_URL = 'https://chat-ai-canacer-production.up.railway.app';
-
 export default function App() {
   const [activeTab, setActiveTab] = useState('chat');
   const [language] = useState<Language>('en');
@@ -78,7 +75,7 @@ export default function App() {
     try {
       if (attachment) {
         // Document OCR & Report Analysis Route
-        const res = await fetch(`${API_BASE_URL}/api/analyze-document`, {
+        const res = await fetch('/api/analyze-document', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -113,7 +110,7 @@ export default function App() {
         }
       } else {
         // Standard Chat Query with Grounding
-        const res = await fetch(`${API_BASE_URL}/api/chat`, {
+        const res = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
